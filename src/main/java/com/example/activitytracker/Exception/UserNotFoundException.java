@@ -1,3 +1,4 @@
+
 package com.example.activitytracker.Exception;
 
 public class UserNotFoundException  extends   RuntimeException{

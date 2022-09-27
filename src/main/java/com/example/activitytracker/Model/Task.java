@@ -1,15 +1,14 @@
 package com.example.activitytracker.Model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
@@ -21,10 +20,10 @@ public class Task {
     private int id;
 
     private String title;
+
     private String description;
 
 
-    @Column(columnDefinition = "varchar(255) default 'pending'")
     private String status;
 
     @CreationTimestamp
